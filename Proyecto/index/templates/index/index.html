@@ -1,0 +1,180 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">    
+    <script>
+        src = "{% static 'jquery/jquery.js' %}"
+    </script>
+
+</head>
+
+<body class="fullpage">
+
+    <div class="container">
+        <header class="row">
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="header">
+
+
+                    <h1>SKY & ROWS</h1>
+                    <br> <br>
+
+
+                </div>
+            </div>
+
+
+            <span id="icono" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="Inicio.html">Inicio</a>
+               
+                <a href="Registro.html ">Registarse</a>
+                <a href="noticias.html">Noticias</a>
+            </div>
+
+
+
+           
+
+            <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "250px";
+                }
+
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                }
+            </script>
+
+
+        </header>
+    </div>
+    <br> <br>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="{% static 'img/ass.jpg' %}" style="width:100%">
+            <div class="text"></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="{% static 'img/cry.jpg' %}" style="width:100%">
+            <div class="text"></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="{% static 'img/ds.jpg' %}" style="width:100%">
+            <div class="text"></div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
+    </div>
+
+
+    <div class="row principal">
+        <div class="col-xs-6 col-md-6 col-lg-5 container-fluid">
+
+            <div class="contenido">
+               <a href="astrooner.html"> <img src="{% static 'img/astro.jpg' %}" alt=""> </a>
+               <a href="age.html"> <img src="{% static 'img/age.jpg' %}" alt="">  </a>
+               <a href="last.html"> <img src="{% static 'img/last.jpg' %}" alt="">  </a>
+               <a href="inm.html"><img src="{% static 'img/inm.jpg' %}" alt=""> </a>
+               <a href="mutant.html"> <img src="{% static 'img/mutant.jpg' %}" alt=""> </a>
+               <a href="noman.html"> <img src="{% static 'img/noman.jpg' %}" alt=""> </a>
+               <a href="pix.html"> <img src="{% static 'img/pix.jpg' %}" alt=""> </a>
+               <a href="port.html"> <img src="{% static 'img/port.jpg' %}" alt=""> </a>
+               <a href="titan.html"> <img src="{% static 'img/titan.jpg' %}" alt=""> </a>
+               <a href="tomb.html"> <img src="{% static 'img/tomb.jpg' %}" alt=""> </a>
+               <a href="tw3.html"> <img src="{% static 'img/tw3.jpg' %}" alt=""> </a>
+               <a href="weh.html"> <img src="{% static 'img/weh.jpg' %}" alt=""> </a>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <footer class="row">
+        <div class="col-xs-12">
+            <div class="footer">
+                <h2></h2>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active"
+        }
+
+        function slideSlides(){
+            var i;
+            var x = document.getElementsByClassName("mySlides fade");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {slideIndex = 1}
+            x[slideIndex-1].style.display = "block";
+            setTimeout(slideSlides, 3000); 
+		}
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    color: rgba(255, 255, 255, 0.815);
+    background-color: #BF2200;
+    margin: 0;
+    padding: 0;
+}
+
+.marco {
+    background-color: gray;
+}
+
+.sidebar1 {
+    background-color: aqua;
+}
+
+.sidebar2 {
+    background-color: rgba(191, 35, 0, 0.877);
+}
+
+.contenido {
+    width: 100%;
+    background-color: #1C1C1D;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 200px;
+
+
+}
+
+.contenido img {
+    width: 170px;
+    height: 270px;
+    margin: 5px;
+
+}
+
+@media screen and (max-width:836px) {
+    .contenido img {
+        width: 120px;
+        height: 160px;
+
+
+    }
+
+    .contenido {
+        min-width: 400px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .contenido img {
+        width: 100px;
+        height: 120px;
+
+
+    }
+
+    .contenido {
+        min-width: 250px;
+    }
+}
+
+@media screen and (max-width:368px) {
+    .contenido img {
+        width: 170px;
+        height: 270px;
+
+
+    }
+
+    .contenido {
+        min-width: 150px;
+    }
+}
+
+
+
+
+.footer {
+    background-color: #BF2200;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+    padding: 10px;
+}
+
+body {
+    color: #fff;
+    background: #1C1C1D;
+    font-family: Arial;
+}
+
+.principal {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.row ul {
+    padding-left: 445px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 120%;
+
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.link {
+    height: 200px;
+    width: 200px;
+}
+
+.form{
+    padding-left: 240px;
+}
+
+.responsive {
+    width: 250px;
+    height: auto;
+    
+  }
+  .contj{
+      width: 50%;
+      margin: 0 auto;
+  }
+
+  .button {
+    border-radius: 4px;
+    background-color: #BF2200;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 200px;
+    height: 70px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+  * {box-sizing:border-box}
+
+  .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+  
+    .mySlides {
+      display: none;
+    }
+  
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+  
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+  
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+  
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+  
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+  
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+  
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+  
+    @-webkit-keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+  
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+
+    .sidenav {
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0; /* Stay at the top */
+        left: 0;
+        background-color: #111; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+      }
+    
+    
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+    
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+    
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+    
+    
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+    
+  
+      * {box-sizing: border-box}
+
+.contmod {
+    position: relative;
+    width: 50%;
+    max-width: 300px;
+  }
+
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .contmod:hover .overlay {
+    opacity: 1;
+  }
