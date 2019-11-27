@@ -9,11 +9,15 @@ Pagina web juegos, django
 TO-DO:
 - [x] crear repositorio
 - [x] subir django
-- [ ] Sqlite django
-- [ ] Crud Django
-- [ ] Html
-- [ ] CSS
-- [ ] personalizar sitio
+- [x] Sqlite django
+- [x] Crud Django
+- [x] Html
+- [x] CSS
+- [x] personalizar sitio
+- [ ] Autenticacion facebook
+- [ ] Fav a post (user)
+- [ ] Logueo usuario
+- [ ] Creacion de usuario, por usuario
 
 
 
