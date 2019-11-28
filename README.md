@@ -16,7 +16,7 @@ TO-DO:
 - [x] personalizar sitio
 - [x] Logueo usuario
 - [x] Creacion de usuario, por usuario
-- [ ] Autenticacion facebook
+- [x] Autenticacion facebook
 
 
 Revisiones:
