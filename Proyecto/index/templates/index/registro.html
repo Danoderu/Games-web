@@ -1,20 +1,17 @@
 {% load static %}
-
-
+{% load socialaccount %}
+{% providers_media_js %} 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+<head>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Registro</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">    
     <script>
         src = "{% static 'jquery/jquery.js' %}"
     </script>
-
-
 </head>
 
 <body class="fullpage">
@@ -22,15 +19,19 @@
         <header class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="header">
+
+
                     <h1>SKY & ROWS</h1>
                     <br> <br>
+
+
                 </div>
             </div>
             <span id="icono" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="{% url 'index' %}">Inicio</a>
-                <a href="/registro">Registrarse</a>
+                <a href="{% url 'registro' %}">Registarse</a>
             </div>
             <script>
                 function openNav() {
@@ -80,15 +81,20 @@
 
 
     <div class="row principal">
-        <div class="col-xs-6 col-md-6 col-lg-5 container-fluid">           
-            <div> 
-                {% for post in posts %} 
-                    <a href="{% url 'post_detail' pk=post.pk %}">
-                            <img src="{{ post.img.url }}" alt={{post.tittle}}>
-                    </a>
-                {% endfor %}
-            </div>
-        </div>
+        <h2>Registro de usuarios</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+        
+            <table>
+        
+                {{ form.as_table }}
+         
+            </table>
+        
+            <input type="reset" value="Limpiar">
+            <input type="submit" value="Registrar">
+            <button> <a href="{% provider_login_url "facebook" method="js_sdk" %}">Facebook</a></button>
+        </form>
     </div>
 
     <footer class="row">
