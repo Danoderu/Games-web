@@ -14,11 +14,9 @@ TO-DO:
 - [x] Html
 - [x] CSS
 - [x] personalizar sitio
+- [x] Logueo usuario
+- [x] Creacion de usuario, por usuario
 - [ ] Autenticacion facebook
-- [ ] Fav a post (user)
-- [ ] Logueo usuario
-- [ ] Creacion de usuario, por usuario
-
 
 
 Revisiones:
